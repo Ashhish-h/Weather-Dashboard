@@ -23,7 +23,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(`http://localhost:4000/weather?city=${city}`);
+      const res = await axios.get(`https://weather-dashboard-dt1a.onrender.com/weather?city=${city}`);
       setWeather(res.data.current);
       setForecast(res.data.forecast);
       const updatedHistory = [city, ...history.filter((h) => h !== city)].slice(0, 5);
